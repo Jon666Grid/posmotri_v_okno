@@ -36,3 +36,34 @@ ul,
 ol {
   list-style: none;
 }
+
+.content {
+display: flex;
+justify-content: space-between;
+padding: 133px 33px;
+}
+
+.search-form {
+  display: flex;
+}
+
+.result {
+max-width: 771px;
+width: 100%;
+}
+
+.content__details {
+  width: 100px;
+}
+
+.result__video-container {
+
+}
+
+.result__video {
+  width: 100%;
+}
+
+.content__video-card-thumbnail {
+
+}
