@@ -58,22 +58,20 @@ ol {
 }
 
 .result__video-container {
+  block-size: 386px;
   position: relative;
   margin-bottom: 16px;
 }
 
 .result__video {
-  width: 100%;
+  block-size: 386px;
+  inline-size: 100%;
 }
 
 .content__video-card {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
-}
-
-.content__video-card:active {
-  background-color: #545050;
 }
 
 .content__video-card-thumbnail {
@@ -84,18 +82,18 @@ ol {
   position: relative;
   overflow: auto;
   scrollbar-width: none;
-  height: 222px;
+  block-size: 205px;
 }
 
 .search-form__fieldset {
   border: none;
 }
 
-.search-form__fieldset:nth-child(1) {
+.search-form__fieldset:first-child {
   inline-size: 225px;
 }
 
-.search-form__fieldset:nth-child(2) {
+.search-form__fieldset:last-child {
   inline-size: 212px;
 }
 
@@ -116,13 +114,14 @@ ol {
   background-color: transparent;
   padding: 2px 0;
   border: none;
+  outline: none;
   color: #fff;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
 }
 
 .search-form__textfield:active {
-  border: 1px solid #fff;
+  outline: 1px solid #fff;
 }
 
 .visually-hidden {
@@ -144,14 +143,8 @@ ol {
   cursor: pointer;
 }
 
-.search-form__label:focus-within {
-  outline :1px solid #fff;
-}
-
-
 input[type='checkbox']:checked+span {
-  background: center / 90% no-repeat url(../images/Rectangle.svg);
-  transition: .2s;
+  background: center / 88% no-repeat url(../images/Rectangle.svg);
 }
 
 .button {
@@ -162,11 +155,6 @@ input[type='checkbox']:checked+span {
   block-size: 34px;
   inline-size: 100%;
 }
-
-.button:focus {
-  outline :1px solid #fff;
-}
-
 
 .search-form__submit-button {
   inline-size: 194px;
@@ -182,15 +170,6 @@ input[type='checkbox']:checked+span {
   font-weight: 700;
   line-height: 1.2;
   font-size: inherit;
-}
-
-.button:active {
-  background-color: #545050;
-}
-
-.button:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 
@@ -235,9 +214,39 @@ input[type='checkbox']:checked+span {
   inset: 0;
 }
 
+.search-form__label-text {
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: inherit;
+}
+
 .search-form__label {
   cursor: pointer;
   margin-right: 4px;
+}
+
+.content__video-card:active {
+  background-color: #545050;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+.search-form__label:focus-within {
+  outline: 1px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.button:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .search-form__label-text:hover {
@@ -249,4 +258,5 @@ input[type='checkbox']:checked+span {
   text-decoration: underline;
   text-underline-offset: 5px;
   color: #fff;
+  transition: 0.3s ease;
 }
